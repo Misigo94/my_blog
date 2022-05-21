@@ -18,7 +18,7 @@ The following are needed for the application to run on a local computer:
 * From the terminal navigate to the cloned project folder.
 * Create a virtual environment. 
 ```bash 
-git clone  https://github.com/Misigo94/Pitch.git
+git clone  https://github.com/Misigo94/my_blog.git
 cd pitchperfect
 python3 -m venv virtual
 source virtual/bin/activate

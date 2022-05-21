@@ -17,8 +17,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class DevConfig(Config):
-    #  SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://u:Password@localhost:5432/user1db'
-     SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://martin3:password@localhost:5432/blogdb'
+     SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://martin4:password@localhost:5432/myblogdb'
 
     
     

@@ -13,7 +13,6 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(255))
     posts = db.relationship('Post', backref='user', lazy="dynamic")
     comments = db.relationship('Comment', backref='user', lazy="dynamic")
-    reviews = db.relationship('Review',backref = 'user',lazy = "dynamic")
 
     # Our function forsaving the user objects
     def save(self):

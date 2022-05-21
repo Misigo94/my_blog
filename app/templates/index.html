@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %} -
+
+
+<div class="card-body text-dark">
+    <p class="card-text">
+    <h2>quote:quote of the day <br>{{data.quote}}</h2>
+    </p>
+</div>
+<!-- <div class="container-fluid text-center">
+    <h1>Enter Your Pitch Here</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 text-center brief">
+            <img class="mb-4" id="homelogo" src="{{ url_for('static', filename = 'images/pitch.avif')}}" alt=""
+                width="200" height="200">
+            <p>
+                If you had just 60 seconds to make a pitch that would make an outstanding lasting impression what would
+                you say??
+                Well lets see what you got by dropping your best pitch here!!
+            </p>
+        </div>
+        <div class="col-md-6">
+            <form action="/home" method="POST">
+                <div class="form-group">
+                    <label class="col-sm-4 col-form-label" for="pitchtitle">
+                        <h6>Pitch Title</h6>
+                    </label>
+                    <input class="form-control form-control-md" type="text" name="pitchtitle"
+                        placeholder="Enter your title here" required>
+                </div>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pitchcategory" id="selectRadio"
+                            value="Technology" checked>
+                        <label class="form-check-label" for="Technology">Marketing</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pitchcategory" id="selectRadio"
+                            value="Health" checked>
+                        <label class="form-check-label" for="Health">Business</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pitchcategory" id="selectRadio"
+                            value="Science" checked>
+                        <label class="form-check-label" for="selectRadio">Agriculture</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pitchcategory" id="selectRadio"
+                            value="Communication" checked>
+                        <label class="form-check-label" for="Communication">Life</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="pitchcategory" id="selectRadio"
+                            value="Communication" checked>
+                        <label class="form-check-label" for="Communication">any other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 col-form-label" for="pitchdecription">
+                        <h6>Pitch Description</h6>
+                    </label>
+                    <textarea class="form-control" placeholder="Enter pitch details here" name="pitchdecription"
+                        id="pitchdecription" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit Your Pitch</button>
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+<div class="row" id="pallete">
+    {% for pitch in pitches %}
+    <div class="card border-dark mb-3" style="max-width:45%">
+        <div class="card-header">
+            <h3>{{pitch.title}}</h3>
+        </div>
+        <div class="card-body text-dark">
+            <p class="card-text">
+                {{pitch.category}}
+            </p>
+            <p class="card-text">
+                {{pitch.description}}
+            </p>
+            <p class="card-text">
+                {{pitch.author_id.username}}
+            </p>
+        </div>
+        <div class="card-footer">
+            <p class="card-text">
+                {{pitch.author}}
+            </p>
+            <a href="/pitch/details/{{pitch.id}}">
+                <button type="button" class="btn btn-outline-secondary">Add Comment</button>
+            </a>
+        </div>
+    </div> -->
+    {% endfor %}
+</div>
+
+{% endblock %}
